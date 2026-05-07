@@ -22,26 +22,38 @@ class Cricketer : public Player
 {
 public:
     string country;
-    Cricketer(string s)
+    void setCountry(string s)
     {
         country = s;
     }
+};
 
+// Dervied Class or Child class of Cricketer class
+class Batter : public Cricketer
+{
+public:
+    int centuries;
+    void setCenturies(int c)
+    {
+        centuries = c;
+    }
     void show()
     {
         cout << "Name: " << name << endl;
         cout << "Runs: " << runs << endl;
         cout << "Country: " << country << endl;
+        cout << "Centuries: " << centuries << endl;
     }
 };
-
 int main()
 {
     int runs;
     cin >> runs;
-    Cricketer c1("India");
+    Batter c1;
+    c1.setCountry("India");
     c1.setName("Virat kohli");
     c1.setRuns(runs);
+    c1.setCenturies(43);
     c1.show();
     return 0;
 }
