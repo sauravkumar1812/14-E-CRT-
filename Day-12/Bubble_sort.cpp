@@ -2,9 +2,11 @@
 using namespace std;
 void swap_array(int &a, int &b)
 {
+    cout << "Before Swapping: " << a << b << endl;
     int temp = a;
     a = b;
     b = temp;
+    cout << "After Swapping: " << a << b << endl;
 }
 void Bubble_Sort(int nums[], int n)
 {
